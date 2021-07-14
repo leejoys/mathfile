@@ -48,7 +48,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	targetFile, err := os.OpenFile(args[2], os.O_APPEND, 0777)
+	targetFile, err := os.OpenFile(args[2], os.O_APPEND|os.O_WRONLY, 0777)
 	if err != nil {
 		log.Fatal(err)
 	}
